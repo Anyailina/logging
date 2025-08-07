@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: logging
+
+audit:
+  enabled: true
+  console: true
+  file:
+    enabled: true
+    path: logs/audit.log
+    max-size-mb: 1
+  kafka:
+    enabled: false
+    topic: audit-logs
+    bootstrap-servers: localhost:9092
+
+http:
+  enabled: true
+  console: true
+  file:
+    enabled: true
+    path: logs/http.log
+    max-size-mb: 1
+  kafka:
+    enabled: false
+    topic: http-logs
+    bootstrap-servers: localhost:9092
